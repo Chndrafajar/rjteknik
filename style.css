@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-nav {
+  gap: 15px;
+}
+
+.nav-item {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.hero {
+  height: 80vh;
+  margin-top: 60px;
+}
+
+.heroTittle {
+  font-weight: 600;
+  margin-top: 120px;
+}
+
+.heroP {
+  margin-top: 10px;
+}
+
+.heroBtn {
+  background-color: #7dd87d;
+  padding: 10px 20px;
+  width: 160px;
+  gap: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  margin-top: 80px;
+}
+
+.aboutH1 {
+  font-weight: 600;
+}
+
+.aboutH5 {
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.rowText {
+  text-align: center;
+}
+
+.pelayananKami {
+  margin-top: 50px;
+}
+
+.btnPelayanan {
+  background-color: #7dd87d;
+  padding: 10px 20px;
+  gap: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.btnItemPelayanan {
+  display: flex;
+  justify-content: center;
+}
+
+.card-body {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.galery {
+  margin-top: 80px;
+}
+
+.btnContact {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  z-index: 2;
+}
+
+.btnContact a button {
+  background-color: #7dd87d;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-weight: 600;
+  border: none;
+  color: #fff;
+  font-size: 23px;
+  z-index: 2;
+}
+
+/* swiper css */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .hero {
+    height: auto;
+  }
+  .heroTittle {
+    margin-top: 50px;
+  }
+  .about {
+    margin-top: 10px;
+  }
+  .btnContact {
+    right: 40px;
+    bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 529px) {
+  .rowText {
+    text-align: left;
+  }
+  .btnContact {
+    right: 25px;
+    bottom: 25px;
+  }
+}
