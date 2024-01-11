@@ -4,8 +4,19 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.navbar {
+  padding: 15px 0px;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0 0.2rem 1rem #0000001a !important;
+}
+
+.card {
+  box-shadow: 0 0.2rem 1rem #0000002a !important;
+}
+
 .navbar-nav {
-  gap: 15px;
+  gap: 10px;
 }
 
 .nav-item {
@@ -13,79 +24,87 @@
   font-weight: 500;
 }
 
-.hero {
-  height: 80vh;
-  margin-top: 60px;
+.nav-item .nav-link:hover {
+  color: #f9c349;
+  transition: all 0.3s ease-in-out;
 }
 
-.heroTittle {
-  font-weight: 600;
+.title {
   margin-top: 120px;
 }
 
-.heroP {
-  margin-top: 10px;
+.home-section {
+  margin-top: 100px;
 }
 
-.heroBtn {
-  background-color: #7dd87d;
+.btn-hero {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.btn-produk {
   padding: 10px 20px;
-  width: 160px;
-  gap: 5px;
+  background-color: #f9c349;
+  color: #000;
+  font-weight: 500;
   text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.about {
-  margin-top: 80px;
+.btn-hubungi {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  font-weight: 500;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
 }
 
-.aboutH1 {
-  font-weight: 600;
+.daftar-produk {
+  margin-top: 40px;
+}
+
+.kualitas {
+  margin-top: 40px;
+}
+
+.about-company {
+  margin-top: 40px;
+  padding: 50px 0px;
+  background-color: #f9c349;
+}
+
+.btn-about-pesan {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-about {
+  display: flex;
+  gap: 20px;
+  margin-top: 4px;
+}
+
+.btn-about-hubungi {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 500;
 }
 
 .aboutH5 {
   font-weight: 600;
   margin-top: 15px;
-}
-
-.rowText {
-  text-align: center;
-}
-
-.pelayananKami {
-  margin-top: 50px;
-}
-
-.btnPelayanan {
-  background-color: #7dd87d;
-  padding: 10px 20px;
-  gap: 5px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  border: none;
-  display: flex;
-  align-items: center;
-}
-
-.btnItemPelayanan {
-  display: flex;
-  justify-content: center;
-}
-
-.card-body {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.galery {
-  margin-top: 80px;
 }
 
 .btnContact {
@@ -96,13 +115,12 @@
 }
 
 .btnContact a button {
-  background-color: #7dd87d;
+  background-color: #f9c349;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   font-weight: 600;
   border: none;
-  color: #fff;
   font-size: 23px;
   z-index: 2;
 }
@@ -126,17 +144,15 @@
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 992px) {
-  .hero {
-    height: auto;
+  .home-section {
+    margin-top: 120px;
   }
-  .heroTittle {
-    margin-top: 50px;
-  }
-  .about {
-    margin-top: 10px;
+  .title {
+    margin-top: 0px;
   }
   .btnContact {
     right: 40px;
@@ -145,11 +161,31 @@
 }
 
 @media only screen and (max-width: 529px) {
-  .rowText {
-    text-align: left;
-  }
   .btnContact {
     right: 25px;
     bottom: 25px;
+  }
+}
+
+@media only screen and (max-width: 388px) {
+  .btn-hero {
+    gap: 14px;
+  }
+  .btn-produk {
+    padding: 10px 15px;
+  }
+
+  .btn-hubungi {
+    padding: 10px 15px;
+  }
+  .btn-about {
+    gap: 14px;
+  }
+  .btn-about-pesan {
+    padding: 10px 10px;
+  }
+
+  .btn-about-hubungi {
+    padding: 10px 10px;
   }
 }
