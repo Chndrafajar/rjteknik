@@ -17,7 +17,7 @@
     <section class="header">
       <nav class="navbar navbar-expand-lg shadow fixed-top" style="z-index: 999; background-color: #fff">
         <div class="container" style="padding-top: 10px; padding-bottom: 10px">
-          <a class="navbar-brand" href="#" data-aos="zoom-in">Logo</a>
+          <a class="navbar-brand" href="#" data-aos="zoom-in"> <span>Rj</span>teknik </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -157,10 +157,37 @@
         </div>
       </div>
     </div>
+
+    <section class="wa-form" id="wa-toggle">
+      <div class="header">
+        <h6>Whatsapp Rjteknik</h6>
+        <button type="button" onclick="toggleForm()">-</button>
+      </div>
+      <div class="items">
+        <form action="" onsubmit="sendToWhatsapp(event)">
+          <div class="input-box">
+            <label for="nama">Perkenalkan Dirimu</label>
+            <input type="text" placeholder="Nama" id="nama" required />
+          </div>
+          <div class="input-box">
+            <label for="nomor">Nomor Whatsapp Kamu</label>
+            <input type="text" placeholder="082838" id="nomor" required />
+          </div>
+          <div class="input-box">
+            <label for="service">Jasa Yang Diperluka</label>
+            <select id="service" required>
+              <option value="">Pilih Jasa</option>
+              <option value="Service Ac">Service Ac</option>
+              <option value="Instalasi Ac">Instalasi Ac</option>
+            </select>
+          </div>
+          <button type="submit">Kirim Sekarang</button>
+        </form>
+      </div>
+    </section>
+
     <div class="btnContact">
-      <a href="https://wa.link/ev9dsy">
-        <button><i class="bi bi-whatsapp"></i></button>
-      </a>
+      <button onclick="toggleForm()"><i class="bi bi-whatsapp"></i></button>
     </div>
     <section class="footer mt-5">
       <div class="container">
@@ -188,6 +215,30 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+
+      function toggleForm() {
+        const formSection = document.getElementById('wa-toggle');
+        formSection.classList.toggle('active');
+      }
+
+      function sendToWhatsapp(event) {
+        event.preventDefault();
+
+        const nama = document.getElementById('nama').value;
+        const nomor = document.getElementById('nomor').value;
+        const service = document.getElementById('service').value;
+
+        if (!nama || !nomor || !service) {
+          alert('Mohon lengkapi semua bidang.');
+          return;
+        }
+
+        const whatsappNumber = '628987007888'; // Replace with your WhatsApp number
+        const message = `Halo, perkenalkan nama saya ${nama}, nomor Whatsapp saya ${nomor}. Saya membutuhkan jasa ${service}.`;
+        const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+        window.open(url, '_blank');
+      }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

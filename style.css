@@ -4,6 +4,15 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.navbar-brand {
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.navbar-brand span {
+  color: #7dd87d;
+}
+
 .navbar-nav {
   gap: 15px;
 }
@@ -15,7 +24,7 @@
 
 .hero {
   height: 80vh;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .heroTittle {
@@ -42,7 +51,7 @@
 }
 
 .about {
-  margin-top: 80px;
+  margin-top: 8px;
 }
 
 .aboutH1 {
@@ -95,7 +104,7 @@
   z-index: 2;
 }
 
-.btnContact a button {
+.btnContact button {
   background-color: #7dd87d;
   width: 60px;
   height: 60px;
@@ -105,6 +114,41 @@
   color: #fff;
   font-size: 23px;
   z-index: 2;
+}
+
+.contact-form {
+  margin-top: 80px;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: center;
+}
+
+.form-contact {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 20px;
+}
+
+.form-contact input {
+  outline: none;
+  padding: 12px 15px;
+  border: 1px solid #0006;
+}
+.form-contact textarea {
+  outline: none;
+  padding: 12px 15px;
+  border: 1px solid #0006;
+}
+.form-contact button {
+  padding: 12px 15px;
+  border: none;
+  background-color: #7dd87d;
+  color: #fff;
+  font-weight: 600;
 }
 
 /* swiper css */
@@ -128,6 +172,87 @@
   height: 100%;
 }
 
+.about {
+  margin-top: 80px;
+}
+
+.wa-form {
+  position: fixed;
+  bottom: 40px;
+  display: none;
+  transition: opacity 0.3s ease;
+  right: 40px;
+  background-color: #fff;
+  z-index: 999;
+  transition: all 0.3s ease-in;
+}
+.wa-form.active {
+  position: fixed;
+  bottom: 120px;
+  right: 40px;
+  opacity: 1;
+  display: block;
+  background-color: #fff;
+  z-index: 999;
+  transition: all 0.3s ease-in;
+}
+
+.wa-form .header {
+  display: flex;
+  background-color: #7dd87d;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 15px;
+}
+
+.wa-form .header h6 {
+  margin-bottom: 0px;
+  color: #fff;
+}
+.wa-form .header button {
+  margin-bottom: 0px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+.wa-form .items {
+  padding: 20px;
+}
+.wa-form .items form .input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.wa-form .items form .input-box input {
+  padding: 7px 15px;
+  border: 1px solid #dee2e6;
+  outline: none;
+}
+.wa-form .items form .input-box select {
+  padding: 7px 15px;
+  border: 1px solid #dee2e6;
+  outline: none;
+}
+.wa-form .items form button {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #7dd87d;
+  padding: 7px 15px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .form-contact {
+    width: 80%;
+  }
+}
 @media only screen and (max-width: 992px) {
   .hero {
     height: auto;
@@ -136,11 +261,17 @@
     margin-top: 50px;
   }
   .about {
-    margin-top: 10px;
+    margin-top: 30px;
   }
   .btnContact {
     right: 40px;
     bottom: 40px;
+  }
+  .wa-form.active {
+    bottom: 90px;
+  }
+  .form-contact {
+    width: 100%;
   }
 }
 
