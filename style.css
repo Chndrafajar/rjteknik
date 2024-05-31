@@ -232,11 +232,13 @@
   padding: 7px 15px;
   border: 1px solid #dee2e6;
   outline: none;
+  background-color: inherit;
 }
 .wa-form .items form .input-box select {
   padding: 7px 15px;
   border: 1px solid #dee2e6;
   outline: none;
+  background-color: inherit;
 }
 .wa-form .items form button {
   margin-top: 10px;
@@ -282,5 +284,8 @@
   .btnContact {
     right: 25px;
     bottom: 25px;
+  }
+  .wa-form {
+    width: 266.67px;
   }
 }
